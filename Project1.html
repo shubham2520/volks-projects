@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HY University</title>
+    <style>
+        #navbar {
+    flex-direction: column;
+}
+
+#navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+
+/* Home section */
+#home {
+    height: 370px;
+    padding: 3px 28px;
+}
+
+#home::before {
+    height: 480px;
+}
+
+#home p {
+    font-size: 13px;
+}
+
+#Gallery {
+    flex-direction: column;
+}
+
+#Gallery .box {
+    padding: 14px;
+    margin: 2px 0px;
+    margin-bottom: 20px;
+}
+
+#contact-box form {
+    width: 80%;
+}
+
+.h-primary {
+    font-size: 30px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 50px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: maroon;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+    display: flex;
+    font-family: Georgia, serif;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('bg1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+#home h1 {
+    color: rgb(50, 49, 49);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Gallery Section */
+#Gallery {
+    margin: 34px;
+    display: flex;
+}
+
+#Gallery .box {
+    /* border: 2px solid brown; */
+    padding: 10px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+#Gallery .box img {
+    height: 500px;
+    margin: auto;
+    display: block;
+}
+
+#Gallery .box p {
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Contact Section */
+#gallery {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    
+
+}
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary {
+    font-family: Georgia, serif;
+    font-size: 3.8rem;
+    padding: 10px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: blue;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <nav id="navbar">
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#contact">Admission form</a></li>
+            <li class="item"><a href="#Gallery-container">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary" style="color: rgb(143, 91, 45);">Welcome to HY University</h1>
+    </section>
+
+    <section id="Gallery-container">
+        <h1 class="h-primary center" style="color: rgb(143, 91, 45);">Our Gallery</h1>
+        <div id="Gallery">
+            <div class="box">
+                <img src="coll1.jpg" alt="">
+                <h2 class="h-secondary center">Best College in haryana</h2>
+                <p class="center">HY University is one of the best universities in haryana.
+                    It offers amazing courses and provide a productive and great learning experience
+                </p>
+            </div>
+            <div class="box">
+                <img src="coll3.jpg" alt="">
+                <h2 class="h-secondary center">One of the Most Famous institutes in india</h2>
+                <p class="center">HY University is one of the most famous institutes in india.
+                    It has great placement and teching curriculum,It is also quite affordable and lovely place to start your higher education journey.
+                </p>
+            </div>
+            <div class="box">
+                <img src="download.jpg" alt="">
+                <h2 class="h-secondary center">Excellent Campus</h2>
+                <p class="center">The entire campus has around ten buildings. Each building is having own department. 
+                    There is a friendly environment in the campus and anyone can go to any building, there is not any restriction. 
+                    This is a very good and amazing place to spend time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center" style="color: rgb(143, 91, 45);">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
